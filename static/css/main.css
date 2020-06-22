@@ -1,0 +1,307 @@
+b/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7 Apr, 2020, 4:32:29 PM
+    Author     : Yuvi
+*/
+ body{
+    font-family: 'Noticia Text', serif;    }
+
+
+.check2{
+    font-family: ch;
+}
+.check1{
+    font-family: check;
+}
+.newfont{
+    font-family: font5;
+}
+.myfoo{
+    font-family: font1;
+}
+.myfoo1{
+    font-family: font3;
+}
+
+
+.myfoo2{
+    font-family: font2;
+}
+.myfoo3{
+    font-family: font4;
+}
+.logout{
+    border-color: #0148aa;
+    color: #fff;
+    background-color: #0148aa; 
+    padding: 15px 30px;
+    margin-left: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.dash1{
+    text-decoration: none;
+    transition: 0.25s;
+}
+.dash1:hover{
+    transform: scale(1.05, 1.05);
+    text-decoration: none;
+}
+.url{
+    width: 95%;
+    color: #0148aa;
+    font-weight: 700;
+    font-size: 18px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    border-color: #0148aa;
+    font-family: ch;
+    transition: 0.25s;
+}
+.url:focus{
+    width: 100%;
+}
+.head{
+    color: #0148aa;
+    font-family: font1;
+        font-weight: bold;
+        font-size: 25px;
+    
+}
+.undr{
+    color: #0148aa;
+}
+.but{
+    border-color: #0148aa;
+    color: #0148aa;
+    padding: 10px;
+    float: right;
+    border-radius: 5px;
+}
+.but:hover{
+    background-color: #0148aa;
+    color: whitesmoke;
+}
+.ico{
+    color: #0148aa;
+}
+.head1{
+    height: 250px;
+    width: 100%;
+    background-color: #0148aa;
+    text-align: center;
+    padding: 4%;
+    
+}
+.head2{
+    height: 150px;
+    width: 100%;
+    background-color: #0148aa;
+    text-align: center;
+    padding: 4%;
+    
+}
+.head1header{
+    color: white;
+    text-align: center;
+    font-family: font1;
+    font-size: 25px;
+}
+.para{
+    color: white;
+    font-size: 15px;
+}
+
+.newheader{
+    background-color: #fff;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    
+
+}
+.button12{
+    padding: 10px 35px;
+    background-color: #0148aa;
+    color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    font-size: 16px;
+    font-family: font2;
+    text-decoration: none;
+}
+.button12:hover{
+    color: #fff;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.newbtn{
+    display:inline-block;
+    border:0.1em solid #0148aa;
+    margin:0 0.3em 0.3em 0;
+    width: 95%;
+    padding: 5px;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:font3;
+    font-size: 20px;
+    font-weight:bold;
+    color:#fff;
+    background-color:#0148aa;
+    text-align:center;
+    transition: all 0.2s;
+}
+.newbtn:hover{
+    color:#0148aa;
+    background-color:#fff;
+}
+.cardbtn2{
+    border-color: #0148aa;
+    color: #fff;
+    background-color: #0148aa; 
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.cardbtn2:hover{
+	background-color: #fff;
+	color:#0148aa;
+}
+
+.black{
+    width: 100%;
+    height: 615px;
+}
+
+.h100{
+    height: 100%;
+}
+
+.linkdec{
+    color: #0148aa;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 16px;
+}
+.linkdec:hover{
+    background-color: #0148aa;
+    color: #fff !important;
+}
+
+
+
+
+/* footer class */
+
+.bignumber{
+    font-size: 25px;
+    color: #0148aa;
+    text-decoration: none;
+
+
+}
+.footermenu{
+    color: #0148aa;
+
+}
+
+
+
+/* services*/
+.service1{
+    width: 100%;
+    height: 300px;
+    background: #0148aa;
+}
+.service2{
+    padding-top: 80px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    
+}
+
+/* About us*/
+.sy1{
+    padding: 10px 5px;
+    margin-right: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    font-size: 20px;
+    font-family: font1;
+    text-decoration: none;
+}
+.sy1:hover {
+    color: #0148aa;
+}
+.brr{
+    width: 100%;
+    height: 2px;
+     background-color: #0148aa;
+}
+.sy2{
+    width: 100%;
+    background-color: transparent;
+    color: #0148aa;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s ease 0s;
+    font-size: 20px;
+    text-decoration: none;
+}
+.proj1{
+    z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.proj2{
+    margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+
+  cursor: pointer;
+  transition: 0.4s;
+}
+.proj3{
+    width: inherit;
+  height: inherit;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.proj4{
+    text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #0148aa;
+}
+.proj3:hover{
+    transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
+    -5px -5px 30px 15px rgba(0,0,0,0.22);
+
+}
+.proj5{
+  border-radius: 20px;
+  object-fit: cover;
+}

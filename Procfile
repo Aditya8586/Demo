@@ -1,0 +1,1 @@
+web: gunicorn assign1.wsgi

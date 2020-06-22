@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<title>Active Users</title>
+	<meta http-equiv="refresh" content="5" />
+	<link rel="stylesheet" href=" {% static 'css/main.css' %}">
+  <link rel="stylesheet" href=" {%static 'css/bootstrap.min.css' %}">
+ <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Noticia+Text:ital@1&family=Patrick+Hand&display=swap" rel="stylesheet">   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+<script src="https://use.fontawesome.com/615e5afc86.js"></script>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( document ).tooltip();
+  } );
+  </script>
+  <style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+
+  </style>
+
+
+	<style>
+    body{
+    font-family: 'Noticia Text', serif;    }
+
+    .green{
+      color: green;
+    }
+    .red{
+      color: red;
+    }
+	table, th, td {
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.2px solid rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+table.centerg{
+  margin-left: 440px;
+  opacity: 0.9;
+}
+.size{
+  font-size: 15px;
+}
+table.center {
+  margin-left: 300px;
+  margin-right: auto;
+  opacity: 0.9;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #ffffff;
+  padding: 3px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 0.2px solid rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  font-size: 20px;
+  text-align: center;
+}
+.left{
+  margin-right: 12px;
+}
+table { 
+    border-collapse: separate; 
+    border-spacing: 0 10px; 
+    margin-top: -10px; /* correct offset on first border spacing if desired */
+}
+td {
+    border: solid 1px #000;
+    border-style: solid none;
+    padding: 10px;
+    
+}
+td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 10px; 
+    border-top-right-radius: 10px; 
+}
+
+</style>
+</head>
+<body class="bg-dark" style="background-image: url({%static 'img/bgi1.jpg' %}); background-size: cover;">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #303960;">
+   <a class="navbar-brand" href="#">    <img src="{% static 'img/mav.png' %}" width="50px" height="30px">
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</div>
+<div class="container">
+	<div class="row ml-auto mt-4">
+		<h2 class="ileft" style="color: #303960">Welcome, {{n}}</h2>
+    <!---------------------------->
+  <div class="btn-group" style="margin-left: 500px">
+  <button type="button" class="btn btn-light"> <i class="fas fa-chalkboard-teacher"></i>Present </button>
+  <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+</div>
+  <!--------------------------------------->
+
+    <button type="button" class="btn btn-warning" style="margin-left: 50px"><i class="fa fa-link" aria-hidden="true"></i><b>Share</b></button>
+		<a href="{% url 'logout' %}" class="btn btn-success ml-auto size">
+Logout <i class="fa fa-sign-out fa-2x" aria-hidden="true"></i></a>
+	</div>
+	<div class="row mt-4">
+	{% for x in user %}
+	<span class="bg-warning ml-3" style="height: 50px; width: 50px; border-radius: 45px">
+		<a href="#" title="Name:{{x.name}} Email:{{x.email}} Status:{{x.status}} Last_Seen:{{x.date}}"><h1 class="text-light text-center mb-2 ">
+		{{ x|make_list|first }}
+	</h1></a>
+	</span>
+	{% endfor %}
+	</div>
+    <table class="centerg my-5">
+        <tr  class="bg-success">
+            <th>Email</th>
+            <th>Status</th>
+        </tr>
+        {% for x in alln %}
+        <tr>
+            <td>{{x.email}}</td>
+            <td class="green">{{x.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<!--	<div class="grid-container mt-5">-->
+<!--		<div class="grid-item"><b>Email</b></div>-->
+<!--        <div class="grid-item"><b>Status</b></div>-->
+<!--		{% for x in alln %}-->
+<!--		{% for key,value in x.items %}-->
+<!--  <div class="grid-item">{{value}}</div>-->
+<!--		{% endfor %}-->
+<!--		{% endfor %}-->
+<!--</div>-->
+
+    <table class="center my-5 ">
+        <tr class="bg-dark">
+            <th>Email</th>
+            <th>Last Seen</th>
+            <th>Status</th>
+        </tr>
+        {% for x in allf %}
+        <tr class="bg-warning">
+            <td>{{x.email}}</td>
+            <td>{{x.date}}</td>
+            <td class="red">{{x.status}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+<!--<div class="grid-container mt-5">-->
+<!--		<div class="grid-item"><b>Email</b></div>-->
+<!--		<div class="grid-item"><b>Last Seen</b></div>-->
+<!--		<div class="grid-item"><b>Status</b></div>-->
+<!--		{% for y in allf %}-->
+<!--		{% for key,value in y.items %}-->
+<!--  <div class="grid-item">{{value}}</div>-->
+<!--		{% endfor %}-->
+<!--		{% endfor %}-->
+<!--</div>-->
+
+</div>
+</body>
+</html>
